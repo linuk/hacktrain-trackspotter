@@ -31,7 +31,8 @@ export default class Results extends React.PureComponent {
         easing: 'easeInOut',
         color: '#e1b73c',
         text: {
-          value: `<p style="font-size: 2rem"> ${this.state.accuracy * 100} %</p>`,
+          value: `<p style="font-size: 2rem"> ${this.state.accuracy *
+          100} %</p>`,
           alignToBottom: false
         }
       });
@@ -47,15 +48,15 @@ export default class Results extends React.PureComponent {
 
   render() {
     return (
-      <Layout padding="1.5rem 2rem" isAppBarShow appBarTitle="STATISTICS">
+      <Layout padding="1.5rem 2rem" isAppBarShow appBarTitle="STATISTICS"
+              marginTop='-15vh'>
         <div className="results__container">
           <div className="results__chart" id={STATISTICS_CHART}/>
-          <p className="results__description animated fadeInUp">
-            Lorem ipsum dolor sit amet, consectetur
-            adipisicing elit. Aut autem
-            commodi doloribus hic inventore, ipsum iusto labore magnam non,
-            obcaecati omnis porro praesentium provident qui repudiandae sint ut,
-            velit voluptates!
+          <p className="results__description animated fadeInUp"
+             style={{ textAlign: 'center' }}>
+            Thank you for using TrackSpotter.<br/>
+            Feel free to play it again. <br/>
+            Have a great journey.
           </p>
         </div>
         <Link to='/tutorial'>

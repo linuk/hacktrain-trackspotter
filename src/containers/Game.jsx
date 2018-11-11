@@ -14,6 +14,10 @@ const IMAGE_IN_ANIMATION = 'fadeIn';
 const IMAGE_OUT_ANIMATION = 'fadeOut';
 const ROUNDS = 3;
 
+const getAppBarTitle = (assetName) => (
+  `Do you see a ${assetName}?`
+);
+
 class Game extends React.PureComponent {
   constructor(props) {
     super(props);
@@ -34,7 +38,7 @@ class Game extends React.PureComponent {
   setAssetId = () => {
     const assetID = this.props.location.search.replace('?assetID=', '');
     this.setState({ assetID });
-    console.log(assetID)
+    console.log(assetID);
   };
 
   getImage = async () => {
@@ -58,7 +62,7 @@ class Game extends React.PureComponent {
     const body = JSON.stringify(this.state.results);
     console.log(body);
     await sendResults(body);
-    const accuracy = 0.7;
+    const accuracy = 1.0;
     this.props.history.push(`/results?accuracy=${accuracy}`);
   };
 
@@ -103,7 +107,7 @@ class Game extends React.PureComponent {
 
     const { imageURL, assetID } = this.state;
     const isImageLoaded = imageURL !== null;
-    const appBarTitle = assetDict[assetID];
+    const appBarTitle = getAppBarTitle(assetDict[assetID]);
 
     const Image = isImageLoaded ?
       <img id="gameImage" src={imageURL} alt="screenshot from train"

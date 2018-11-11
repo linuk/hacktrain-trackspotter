@@ -10,7 +10,7 @@ import './Onboarding.sass';
 const title = 'TrackSpotter';
 
 export default () => (
-  <Layout padding='1rem'>
+  <Layout padding='1rem' marginTop='-15vh'>
     <img src={logo} alt="Track Spotter main logo"
          className="logo animated fadeInDown"/>
     <Typography

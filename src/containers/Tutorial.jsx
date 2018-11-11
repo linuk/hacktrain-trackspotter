@@ -4,10 +4,8 @@ import Link from 'react-router-dom/es/Link';
 import Typography from '@material-ui/core/es/Typography/Typography';
 
 import Layout from '../components/Layout';
-import { assetDict, assetImages } from '../configs';
+import { assetDescriptions, assetDict, assetImages } from '../configs';
 import './Tutorial.sass';
-
-const assetDescription = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, aut deleniti dolorum fuga laudantium obcaecati.';
 
 export default class Tutorial extends React.PureComponent {
 
@@ -33,10 +31,11 @@ export default class Tutorial extends React.PureComponent {
     const { assetId } = this.state;
     const assetTitle = assetDict[assetId];
     const assetImageURL = assetImages[assetId];
+    const assetDescription = assetDescriptions[assetId];
 
     return (
       <Layout padding='1rem 2rem' isAppBarShow
-              appBarTitle={assetTitle.toUpperCase()}>
+              appBarTitle={assetTitle.toUpperCase()} marginTop='-15vh'>
         <div className="tutorial_assetImageContainer animated fadeInDown">
           <img src={assetImageURL} className="tutorial_assetImage"
                alt={assetTitle}/>

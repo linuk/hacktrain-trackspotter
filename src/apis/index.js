@@ -1,6 +1,7 @@
 import request from 'request';
 
-export const HOST = 'http://10.75.203.25:5000';
+export const HOST = 'http://localhost:5000';
+//export const HOST = 'http://10.158.113.80:5000';
 const IMAGE_ENDPOINT = HOST + '/image';
 const POST_ENDPOINT = HOST + '/asset_report';
 
