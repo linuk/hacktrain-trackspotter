@@ -35,7 +35,7 @@ export default class Tutorial extends React.PureComponent {
     const assetImageURL = assetImages[assetId];
 
     return (
-      <Layout padding='2rem' isAppBarShow
+      <Layout padding='1rem 2rem' isAppBarShow
               appBarTitle={assetTitle.toUpperCase()}>
         <div className="tutorial_assetImageContainer animated fadeInDown">
           <img src={assetImageURL} className="tutorial_assetImage"

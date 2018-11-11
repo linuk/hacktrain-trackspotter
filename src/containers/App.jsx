@@ -7,6 +7,7 @@ import 'animate.css';
 import Onboarding from './Onboarding';
 import Tutorial from './Tutorial';
 import Game from './Game';
+import Results from './Results';
 import './App.sass';
 
 const theme = createMuiTheme({
@@ -29,6 +30,7 @@ export default class App extends Component {
             <Route exact path='/' component={Onboarding}/>
             <Route path='/tutorial' component={Tutorial}/>
             <Route path='/game' component={Game}/>
+            <Route path='/results' component={Results}/>
           </div>
         </MuiThemeProvider>
       </Router>

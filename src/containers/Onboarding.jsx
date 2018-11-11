@@ -23,8 +23,11 @@ export default () => (
       {title}
     </Typography>
     <Link to='/tutorial'>
-      <Button color="primary" variant="contained"
-              className="animated fadeInUp delay-1s">
+      <Button
+        color="primary"
+        variant="contained"
+        className="animated fadeInUp delay-1s"
+      >
         START
       </Button>
     </Link>
